@@ -1,15 +1,23 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 14 17:02:11 2021
-
-@author: rnfi
-"""
-
 <html>
-<body>
-<div>
-<h3>This is heroku test 001 </h3>
-</div>
-</body>
+  <body>
+    <div class="login">
+      <center><h1>Video Verification</h1>
+      <br>
+       <form action="{{url_for('predict')}}"method="post">
+            <div><span>Pan Image: </span><span><input type="text"></span></div>
+          <br>
+            <div><span>aadhar Image: </span><span><input type="text"></span></div>
+          <br>
+            <div><span>Image: </span> <span><input type="text"></span> </div>
+          <br>
+            <div> <span>Video: </span><span><input type="text"></span> </div>
+          <br>
+            <div><span><button type="submit"> Predict</button></span></div>
+     </form>
+     <br>
+     <br>
+     {{prediction_text}}
+    </div>
+    </center>
+  </body>
 </html>
